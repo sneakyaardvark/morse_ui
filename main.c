@@ -1,5 +1,6 @@
 #include <ncurses.h>
 #include "morse_functions.h"
+#include "cereal.h"
 
 #define VERSION 0.030
 
@@ -47,6 +48,8 @@ int main()
     // ready for input
     keypad(send_input, true);
 
+    //int serialPort = initSerial();
+
     int curr_choice = 0;
     bool loop = true;
 
@@ -86,7 +89,7 @@ int main()
             switch (curr_choice)
             {
                 case MESSAGE:
-                    sendMessage(send_input);
+                    sendMessage(send_input, 1);
                     break;
                 case L_ON:
                     break;
@@ -103,10 +106,4 @@ int main()
     // end ncurses
     endwin();
     return 0;
-}
-
-void addLog(const char *str, WINDOW *log_win)
-{
-    // todo limit logs to size of log window
-    mvwprintw(log_win, 1, 1, "%s", str);
 }
