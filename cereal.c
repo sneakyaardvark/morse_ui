@@ -1,18 +1,22 @@
-//
-// Created by andrew on 8/4/22.
-//
+/*
+ * Andrew Stanton
+ * 8/1/2022
+ * Serial communication to the microcontroller
+ *
+ */
 
 #include "cereal.h"
 
-const unsigned char DC1 = 0b00010001;
-const unsigned char DC2 = 0b00010010;
-const unsigned char DC3 = 0b00010011;
-const unsigned char DC4 = 0b00010100;
+const char DC1 = 0b00010001;
+const char DC2 = 0b00010010;
+const char DC3 = 0b00010011;
+const char DC4 = 0b00010100;
 
 int initSerial()
 {
-  // on arduinos, it is often necessary to wait up to 2 seconds after opening / configuring the port
-  // and possibly another 50ms or more between reads/writes
+  // on Arduinos, it is often necessary to wait up to 2 seconds after opening / configuring the port
+  // and possibly another 50ms or more between reads/writes. However, this does not seem to be the case with
+  // the particular ESP32 device used here
 
   // open the port
   int serialPort = open("/dev/ttyUSB0", O_RDWR);
@@ -24,14 +28,14 @@ int initSerial()
   if (serialPort < 0)
   {
     printf("Error %i from opening port: %s\n", errno, strerror(errno));
-    exit(1);
+    return -1;
   }
 
   // read existing settings and handle errors
   if (tcgetattr(serialPort, &tty) != 0)
   {
     printf("Error %i from tcgetattr: %s\n", errno, strerror(errno));
-    exit(1);
+    return -1;
   }
 
   // configure tty
@@ -72,7 +76,7 @@ int initSerial()
   if (tcsetattr(serialPort, TCSANOW, &tty) != 0)
   {
     printf("Error %i from tcsetattr: %s\n", errno, strerror(errno));
-    exit(1);
+    return -1;
   }
 
   return serialPort;
