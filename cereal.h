@@ -23,7 +23,7 @@ extern const char DC4;
 
 /**
  * Open the serial port (/dev/ttyUSB0) and configure it
- * Returns the file descriptor of the open port
+ * @return The file descriptor of the open port
  */
 int initSerial();
 

@@ -76,9 +76,8 @@ int main()
       }
     }
 
-    int choice = wgetch(send_input);
-    wprintw(info, "%c", choice);
-    switch (choice)
+    int key = wgetch(send_input);
+    switch (key)
     {
       case KEY_UP:
       case (int) 'k':
@@ -95,7 +94,7 @@ int main()
       default:
         break;
     }
-    if (choice == 10) // user hits enter
+    if (key == 10) // user hits enter
       switch (curr_choice)
       {
         case MESSAGE:
