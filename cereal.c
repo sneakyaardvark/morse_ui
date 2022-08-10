@@ -69,8 +69,8 @@ int initSerial()
   tty.c_cc[VMIN] = 0;
 
   // set in/out baud rates
-  cfsetispeed(&tty, B9600);
-  cfsetospeed(&tty, B9600);
+  cfsetispeed(&tty, B115200);
+  cfsetospeed(&tty, B115200);
 
   // save tty, check for errors
   if (tcsetattr(serialPort, TCSANOW, &tty) != 0)
