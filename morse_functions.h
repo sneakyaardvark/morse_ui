@@ -1,5 +1,6 @@
 /*
- * Andrew Stanton
+ * ECE103 Engineering Computation
+ * Andrew Stanton / Team Wind
  * 8/4/2022
  * Helper functions for the UI backend (header)
  *

@@ -1,5 +1,6 @@
 /*
- * Andrew Stanton
+ * ECE103 Engineering Computation
+ * Andrew Stanton / Team Wind
  * 8/1/2022
  * Serial communication to the microcontroller
  *

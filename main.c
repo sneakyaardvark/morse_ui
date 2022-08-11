@@ -1,5 +1,6 @@
 /*
- * Andrew Stanton
+ * ECE103 Engineering Computation
+ * Andrew Stanton / Team Wind
  * 7/14/2022
  * This is an NCURSES interface used to interact with a microcontroller
  * capable of sending morse code messages with a laser
@@ -8,7 +9,7 @@
 #include <ncurses.h>
 #include "morse_functions.h"
 
-#define VERSION 0.045
+#define VERSION 0.047
 
 int main()
 {
