@@ -1,6 +1,12 @@
 /*
  * ECE103 Engineering Computation
- * Andrew Stanton / Team Wind
+ * Team Wind
+ * Philip Nevins
+ * Andrew Stanton
+ * Aziz Alshaaban
+ * Luis Poroj
+ * Paul Krueger
+ * Author: Andrew Stanton
  * 8/1/2022
  * Serial communication to the microcontroller (header)
  *

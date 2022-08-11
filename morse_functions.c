@@ -1,6 +1,12 @@
 /*
  * ECE103 Engineering Computation
- * Andrew Stanton / Team Wind
+ * Team Wind
+ * Philip Nevins
+ * Andrew Stanton
+ * Aziz Alshaaban
+ * Luis Poroj
+ * Paul Krueger
+ * Author: Andrew Stanton
  * 8/4/2022
  * Helper functions for the UI backend
  *

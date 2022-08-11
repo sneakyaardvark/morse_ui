@@ -1,6 +1,12 @@
 /*
  * ECE103 Engineering Computation
- * Andrew Stanton / Team Wind
+ * Team Wind
+ * Philip Nevins
+ * Andrew Stanton
+ * Aziz Alshaaban
+ * Luis Poroj
+ * Paul Krueger
+ * Author: Andrew Stanton
  * 7/14/2022
  * This is an NCURSES interface used to interact with a microcontroller
  * capable of sending morse code messages with a laser
